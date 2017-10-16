@@ -5,7 +5,7 @@
 --        Usage:  ./simple-pendulum.lua
 --
 --  Description:  Solves the problem of the double pendulum using Runge-Kutta 4th order method
---
+--                minth is 8.442e-13 if N = 1e9 and tN = 100; 7.344e-12 if N = 1e8 and tN = 4.
 --      Options:  ---
 -- Requirements:  ---
 --         Bugs:  ---
@@ -17,20 +17,20 @@
 --     Revision:  ---
 --------------------------------------------------------------------------------
 -- Define parameters
-local t0      = 0
-local tN      = 100
-local theta0  = 0
-local dtheta0 = 0
-local N       = 1e9
-local g       = 9.8
-local l       = 1
+local t0      = 0                 -- Initial time
+local tN      = 4                 -- Finishing time
+local theta0  = 0                 -- Angle from positive x axis (theta) at t0
+local dtheta0 = 0                 -- Change rate in theta at t0
+local N       = 1e8               -- Number of steps
+local g       = 9.8               -- Acceleration due to gravity
+local l       = 1                 -- Length of pendulum
 
 -- Initiate problem variables
-local t       = t0
-local theta   = theta0
-local dtheta  = dtheta0
-local h       = (tN - t0) / N
-local minth   = math.pi
+local t       = t0                -- Initiate time variable
+local theta   = theta0            -- Initiate theta variable
+local dtheta  = dtheta0           -- Initiate dtheta variable
+local h       = (tN - t0) / N     -- define step size
+local minth   = theta0 + math.pi  -- Define minth at t0
 
 -- Define the d2theta/dt2 = f(g, l, t, theta, dtheta) function
 -- Essentially the RHS of the problem
