@@ -5,7 +5,8 @@
 --        Usage:  ./simple-pendulum.lua
 --
 --  Description:  Solves the problem of the double pendulum using Runge-Kutta 4th order method
---                minth is 8.442e-13 if N = 1e9 and tN = 100; 7.344e-12 if N = 1e8 and tN = 4.
+--                minth is 8.442e-13 if N = 1e9 and tN = 100 (took 1122.07s) and
+--                7.344e-12 if N = 1e8 and tN = 4 (took 114.26s).
 --      Options:  ---
 -- Requirements:  ---
 --         Bugs:  ---
