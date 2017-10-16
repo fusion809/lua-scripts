@@ -43,7 +43,7 @@ end
 -- Loop over time
 for i = 1,N do
     -- First approximation
-    k1     = h * f(g, l, t, theta, dtheta)
+    k1     = h * f(g, l, t,       theta,            dtheta)
     l1     = h * dtheta;
 
     -- Second approximation
@@ -55,13 +55,13 @@ for i = 1,N do
     l3     = h * (dtheta + 1/2 * k2)
 
     -- Fourth approximation
-    k4     = h * f(g, l, t + h, theta + l3, dtheta + k3)
+    k4     = h * f(g, l, t + h,   theta + l3,       dtheta + k3)
     l4     = h * (dtheta + 1/2 * k3)
 
     -- Updating variables
     t      = t + h
     dtheta = dtheta + (1 / 6) * (k1 + 2 * k2 + 2 * k3 + k4)
-    theta  = theta + (1 / 6) * (l1 + 2 * l2 + 2 * l3 + l4)
+    theta  = theta  + (1 / 6) * (l1 + 2 * l2 + 2 * l3 + l4)
 
     -- Determining pi + theta; at minima it is 0
     diff   = math.abs(theta + math.pi)
