@@ -79,7 +79,7 @@ end
 print(minth)
 
 --Plot theta against t
-gp = require("gnuplot")    -- Uses this library https://bitbucket.org/lucashnegri/lua-gnuplot/raw/34136a285a8820f31e1c63b7c81aa1b70a4b60ec/gnuplot.lua
+gp = require("gnuplot")           -- Uses this library https://bitbucket.org/lucashnegri/lua-gnuplot/raw/34136a285a8820f31e1c63b7c81aa1b70a4b60ec/gnuplot.lua
 
 local g = gp{
     width  = 1600,
