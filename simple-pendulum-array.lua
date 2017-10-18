@@ -121,7 +121,9 @@ local g = gp{
     }
 }:plot('simple-pendulum-dtheta-by-t.png')
 
+--Plot theta against t
 lp = require("lua-plot")
 p = lp.plot{}
 p:AddSeries(t, theta)
-p:Redraw()
+p:Show()
+io.read()
