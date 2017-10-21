@@ -18,10 +18,10 @@
 --------------------------------------------------------------------------------
 -- Define parameters
 local t0        = 0                 -- Initial time
-local tN        = 10                -- Finishing time
+local tN        = 4                 -- Finishing time
 local theta0    = 0                 -- Angle from positive x axis (theta) at t0
 local dtheta0   = 0                 -- Change rate in theta at t0
-local N         = 1e6               -- Number of steps
+local N         = 1e7               -- Number of steps
 local g         = 9.8               -- Acceleration due to gravity
 local l         = 1                 -- Length of pendulum
 
@@ -99,7 +99,7 @@ local g = gp{
             },
         },
     }
-}:plot('simple-pendulum-theta-by-t.png')
+}:plot('01-simple-pendulum-theta-by-t.png')
 
 local g = gp{
     width  = 1600,
@@ -119,11 +119,11 @@ local g = gp{
             },
         },
     }
-}:plot('simple-pendulum-dtheta-by-t.png')
+}:plot('02-simple-pendulum-dtheta-by-t.png')
 
---Plot theta against t
+--[[Plot theta against t
 lp = require("lua-plot")
 p = lp.plot{}
 p:AddSeries(t, theta)
 p:Show()
-io.read()
+io.read()]]--
