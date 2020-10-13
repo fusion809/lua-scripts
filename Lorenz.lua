@@ -111,4 +111,4 @@ local g = gp{
             },
         },
     }
-}:splot('Lorenz-phase-plot.png')
+}:splot('Lorenz-phase-plot.svg')
